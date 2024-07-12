@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #111;
+}
+
+body::-webkit-scrollbar
+{
+    display: none;
+}
+
+.header
+{
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+ul
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: none;
+    margin: none;
+}
+
+.back
+{
+    width: 32px;
+    height: 32px;
+    background-color: #181818;
+    border-radius: 25px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back svg
+{
+    display: block;
+    fill: rgb(155, 155, 155);
+    scale: 0.8;
+}
+
+.icon
+{
+    width: 28px;
+    height: 28px;
+    background-color: #181818;
+    border-radius: 25px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.icon svg{
+    display: block;
+    fill: rgb(155, 155, 155);
+    scale: 0.6;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.title
+{
+    font-family: 'Bebas', sans-serif;
+    color: rgb(155, 155, 155);
+    font-size: 15px;
+    background-color: #181818;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.title svg{
+    display: block;
+    fill: rgb(155, 155, 155);
+    scale: 0.6;
+}
+
+.body
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-body {
+    width: 70%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(14, 14, 14);
+}
+.img-body img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+.img-body img.enlarged {
+    transform: scale(1.6);
+}
+
+.h2-body
+{
+    font-family: 'Bebas', sans-serif;
+    color: rgb(155, 155, 155);
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 19px;
+    padding: 5px;
+}
+
+.h2-body svg{
+    display: block;
+    fill: rgb(155, 155, 155);
+    scale: 0.6;
+    background-color: #181818;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.p-body
+{
+    display: flex;
+    color: rgb(155, 155, 155);
+    align-items: center;
+}
+
+.p-body svg{
+    display: block;
+    fill: rgb(155, 155, 155);
+    scale: 0.6;
+    background-color: #181818;
+    padding: 10px;
+    border-radius: 25px;
+    width: 28px;
+    height: 24px;
+}
