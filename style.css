@@ -101,7 +101,7 @@ ul
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #0e0e0e;
+    background-color: none;
     border-radius: 25px;
     width: 80%;
     height: auto;
