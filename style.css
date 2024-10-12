@@ -86,35 +86,13 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
-    overflow-y: auto;
     max-height: 800px;
 }
 
-.main-content::-webkit-scrollbar {
-    width: 8px;
-}
-
-.main-content::-webkit-scrollbar-track {
-    background: #2b2b2b;
-    border-radius: 10px;
-}
-
-.main-content::-webkit-scrollbar-thumb {
-    background: #444;
-    border-radius: 10px;
-    transition: background 0.3s ease;
-}
-
-.main-content::-webkit-scrollbar-thumb:hover {
-    background: #666;
-}
-
-.main-content {
-    scrollbar-width: thin;
-    scrollbar-color: #444 #2b2b2b;
-}
-
 .tags-header {
+    position: sticky;
+    top: 10%;
+    z-index: 1;
     display: flex;
     align-items: center;
     width: 500px;
@@ -247,4 +225,101 @@ body {
 
 .main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .last svg {
     display: block;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto; 
+        padding: 10px;
+        background-color: #222;
+    }
+
+    .header .header-logo {
+        width: 80px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .header .header-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .header .header-links .links-ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .header .header-links .links-li {
+        margin: 5px 0;
+    }
+
+    .header .header-links .links-li .link {
+        width: 100%; 
+        text-align: center;
+        padding: 10px; 
+        font-size: 14px;
+    }
+
+    .main-content {
+        padding: 10px;
+        max-height: 100vh;
+    }
+
+    .main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card {
+        width: 80vw;
+        height: auto;
+        flex-direction: column; 
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .svg-icon {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .tutorial-title {
+        justify-content: flex-start;
+        margin: 0; 
+    }
+
+    .main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .tutorial-title .title {
+        font-size: 16px;
+        color: #8f8f8f; 
+    }
+
+    .main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .last {
+        position: static;
+        margin-top: 10px;
+        background-color: #111; 
+        border-radius: 5px; 
+        text-align: center; 
+    }
+
+    .main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .last svg {
+        display: inline;
+        margin-left: 5px; 
+    }
+
+    .tags-header {
+        width: 100%; 
+        height: auto; 
+        margin: 5px 0; 
+    }
+
+    .tag-btn {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .tag-btn .text {
+        font-size: 10px; 
+    }
 }
