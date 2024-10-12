@@ -1,116 +1,250 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
 body {
     font-family: 'Roboto', sans-serif;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background-color: #111;
+    overflow-x: hidden;
 }
 
-body::-webkit-scrollbar
-{
-    display: none;
-}
-
-header
-{
+.header {
     display: flex;
     align-items: center;
-    height: 50px;
     width: 100%;
-    justify-content: center;
-    background-color: #1a1a1a;
+    height: 50px;
+    background-color: #222222;
+    overflow: hidden;
 }
 
-ul 
-{
+.header .header-logo {
+    display: block;
+    width: 100px;
+    height: 32px;
+    padding: 5px;
+}
+
+.header .header-logo .logo-img {
+    width: 100px;
+    height: 32px;
+}
+
+.header .header-links {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 10px;
+}
+
+.header .header-links .links-ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header .header-links .links-li {
+    margin-right: 10px;
+}
+
+.header .header-links .links-li .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #161616;
+    padding: 2.5px;
+    border-radius: 5px;
+    color: #666;
+    transition: 0.1s all ease-in-out;
+    border: 1px solid #2e2e2e;
+}
+
+.header .header-links .links-li .link.active {
+    border-color: rgba(219, 124, 0, 0.63);
+}
+
+.header .header-links .links-li .link.sandmod {
+    width: 100px;
+}
+
+.header .header-links .links-li .link:hover {
+    background-color: #2c2c2c;
+}
+
+.header .header-links .links-li .link .link-svg {
+    display: flex;
+    align-items: center;
+    margin-left: 11px;
+    margin-right: 11px;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    overflow-y: auto;
+    max-height: 800px;
+}
+
+.main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #2b2b2b;
+    border-radius: 10px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+.main-content {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #2b2b2b;
+}
+
+.tags-header {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+    height: 40px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-right: 1px solid #666 ;
+}
+
+.tags-header .tags {
+    display: flex;
+    align-items: center;
+}
+
+.tags-header .tags .tags-ul {
     margin: 0px;
     padding: 0px;
     list-style: none;
-}
-
-.header-btns
-{
-    height: 100%;
     display: flex;
-    align-items: center;
 }
 
-.header-btn
-{
+.tag-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #111;
-    padding: 5px;
+    background-color: #1d1d1d;
+    border: 1px solid #303030;
+    border-radius: 5px;
     margin: 10px;
-    border-radius: 25px;
-    width: 80px;
-    scale: 0.8;
-    transition: 0.1s all ease-in;
+    cursor: pointer;
 }
 
-.header-btn span
-{
-    fill: #8b8b8b;
-    scale: 0.8;
+.tag-btn:hover {
+    background-color: #111;
 }
 
-.header-btn:hover
-{
-    background-color: #272727;
+.tag-btn.active {
+    background-color: #111;
 }
 
-.header-btn.active
-{
-    background-color: rgba(255, 154, 31, 0.363);
+.tag-btn .text {
+    color: #8f8f8f;
+    margin: 5px;
+    font-size: 12px;
 }
 
-.header-btn.active:hover
-{
-    background-color: rgba(255, 154, 31, 0.363);
+.tag-btn .svg svg {
+    display: block;
 }
 
-.logo
-{
-    position: absolute;
-    top: 0%;
-    left: 0%;
+.main-content .tutorials-grid {
     display: flex;
-    justify-content: start;
-    width: 100px;
-    height: 50px;
-    scale: 0.8;
-}
-
-.logo-img
-{
-    display: flex;
-    width: 130px;
-    height: 50px;
+    flex-wrap: wrap;
     margin: 0px;
+    padding: 0px;
 }
 
-.main
-{
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
+.main-content .tutorials-grid .tutorials-ul {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
     justify-content: center;
-    background-color: none;
-    border-radius: 25px;
-    width: 80%;
-    height: auto;
-    padding: 20px;
-    max-height: 70vh;
-    overflow-y: auto;
-    margin-top: 30px;
+    margin: 0px;
+    padding: 0px;
 }
 
-.main::-webkit-scrollbar {
-    display: none;
+.main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card {
+    display: flex;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    width: 180vh;
+    height: 40px;
+    border: 1px solid #303030;
+    overflow: hidden;
+    position: relative;
+    margin: 5px;
+}
+
+.main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card:hover {
+    background-color: #1f1f1f;
+}
+
+.main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .svg-icon {
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .tutorial-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .tutorial-title .title {
+    color: #8f8f8f;
+    font-size: 13px;
+}
+
+.main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .last {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 45px;
+    transform: translateY(-50%);
+    background-color: #111;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .last svg {
+    display: block;
 }
