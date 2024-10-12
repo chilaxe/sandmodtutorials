@@ -3,46 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Bebas+Neue&display=swap">
     <link rel="stylesheet" href="style.css">
-    <title>Sandmod - Tutorials</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>SandmodEngine~Tutorials - Home</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="logo_sandmod.svg" alt="image" class="logo-img">
+    <div class="header">
+        <div class="header-logo">
+            <img src="images/logo_sandmod.svg"  class="logo-img" alt="sandmod~logo">
         </div>
-        <div class="header-btns">
-            <ul>
-                <li>
-                    <a href="/sandmodtutorials/" target="_self" class="header-btn active">
-                        <span>
-                            <svg width="32px" height="32px" viewBox="0 0 0.96 0.96" xmlns="http://www.w3.org/2000/svg"><path d="m0.8 0.32 -0.24 -0.21a0.12 0.12 0 0 0 -0.16 0L0.16 0.32a0.12 0.12 0 0 0 -0.04 0.09V0.76a0.12 0.12 0 0 0 0.12 0.12h0.48a0.12 0.12 0 0 0 0.12 -0.12v-0.35A0.12 0.12 0 0 0 0.8 0.32m-0.24 0.48h-0.16v-0.2a0.04 0.04 0 0 1 0.04 -0.04h0.08a0.04 0.04 0 0 1 0.04 0.04Zm0.2 -0.04a0.04 0.04 0 0 1 -0.04 0.04h-0.08v-0.2a0.12 0.12 0 0 0 -0.12 -0.12h-0.08a0.12 0.12 0 0 0 -0.12 0.12v0.2H0.24a0.04 0.04 0 0 1 -0.04 -0.04v-0.35a0.04 0.04 0 0 1 0.014 -0.03l0.24 -0.21a0.04 0.04 0 0 1 0.053 0l0.24 0.21a0.04 0.04 0 0 1 0.014 0.03Z"/></svg>
+        <div class="header-links">
+            <ul class="links-ul">
+                <li class="links-li">
+                    <a href="/" style="width: 32px;" class="link active" target="_self" title="home">
+                        <span class="link-svg">
+                            <svg width="18px" height="18px" viewBox="0 0 0.36 0.36" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#b4b4b4" fill-rule="evenodd" d="M0.187 0.047a0.017 0.017 0 0 0 -0.014 0l-0.158 0.073a0.017 0.017 0 0 0 0 0.031l0.032 0.015A0.017 0.017 0 0 0 0.045 0.174V0.247a0.017 0.017 0 0 0 0.004 0.01L0.062 0.247l-0.013 0.01 0 0 0 0 0 0 0 0a0.045 0.045 0 0 0 0.002 0.003q0.002 0.003 0.007 0.007c0.006 0.005 0.014 0.012 0.025 0.019C0.106 0.301 0.14 0.315 0.186 0.315c0.046 0 0.077 -0.014 0.098 -0.028a0.119 0.119 0 0 0 0.022 -0.02 0.09 0.09 0 0 0 0.007 -0.01l0 0 0 0v0h0c0 0 0 0 -0.015 -0.008l0.015 0.008A0.017 0.017 0 0 0 0.315 0.247V0.174a0.017 0.017 0 0 0 -0.003 -0.009l0.032 -0.015a0.017 0.017 0 0 0 0 -0.031zM0.281 0.18 0.187 0.223a0.017 0.017 0 0 1 -0.014 0L0.079 0.18v0.061a0.126 0.126 0 0 0 0.022 0.017c0.018 0.011 0.046 0.023 0.085 0.023 0.039 0 0.063 -0.011 0.078 -0.022a0.085 0.085 0 0 0 0.018 -0.017zM0.18 0.19 0.063 0.135 0.18 0.08 0.297 0.135z" clip-rule="evenodd"/></svg>
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a href="tutorials.html" target="_self" class="header-btn">
-                        <span>
-                            <svg width="32" height="32" viewBox="0 0 0.96 0.96" xmlns="http://www.w3.org/2000/svg"><path d="M.807.408.72.4Q.695.4.67.403A.24.24 0 0 0 .594.337a.15.15 0 0 0 .04-.103.154.154 0 0 0-.309 0 .15.15 0 0 0 .04.103.24.24 0 0 0-.076.066Q.265.399.24.4L.153.408a.04.04 0 0 0-.033.04v.33a.04.04 0 0 0 .014.031.04.04 0 0 0 .033.009A.4.4 0 0 1 .24.809a.4.4 0 0 1 .218.065l.005.002L.48.88.491.878h.003L.499.876A.4.4 0 0 1 .72.809a.4.4 0 0 1 .073.007.04.04 0 0 0 .033-.009A.04.04 0 0 0 .84.776v-.33A.04.04 0 0 0 .807.407M.48.16a.074.074 0 0 1 0 .148.074.074 0 0 1 0-.148M.44.773a.5.5 0 0 0-.2-.044L.2.731V.48a.4.4 0 0 1 .101.002h.004A.4.4 0 0 1 .44.533ZM.48.464.425.437H.423L.383.423A.16.16 0 0 1 .48.388a.16.16 0 0 1 .098.034.5.5 0 0 0-.098.042m.28.267a.46.46 0 0 0-.24.04v-.24A.4.4 0 0 1 .655.482h.008A.4.4 0 0 1 .76.48Z"/></svg>
+                <li class="links-li">
+                    <a href="https://www.blockmango.com/#/editor" class="link sandmod" target="_blank" title="SandmodEngine website">
+                        <span class="link-svg">
+                            <img src="images/logo-.png" width="14px" height="18px">
+                        </span>
+                        <span class="link-svg">
+                            <svg width="18px" height="18px" viewBox="0 0 0.36 0.36" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#b4b4b4" d="M0.185 0.091a0.017 0.017 0 1 1 0.023 -0.025l0.101 0.096a0.017 0.017 0 0 1 0 0.025l-0.101 0.096a0.017 0.017 0 0 1 -0.023 -0.025L0.256 0.191H0.062a0.017 0.017 0 0 1 0 -0.034h0.194z"/></svg>
+                        </span>
+                        <span class="link-svg">
+                            <svg width="16px" height="16px" viewBox="0 0 0.36 0.36" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#b4b4b4" fill-rule="evenodd" d="M0.18 0a0.18 0.18 0 1 0 0 0.36 0.18 0.18 0 0 0 0 -0.36M0.138 0.04a0.153 0.153 0 0 0 -0.103 0.118h0.057A0.27 0.27 0 0 1 0.138 0.04m0.084 0a0.27 0.27 0 0 1 0.046 0.118H0.324A0.153 0.153 0 0 0 0.222 0.04M0.234 0.158A0.207 0.207 0 0 0 0.18 0.041a0.207 0.207 0 0 0 -0.054 0.117zM0.124 0.191h0.111A0.207 0.207 0 0 1 0.18 0.319 0.225 0.225 0 0 1 0.123 0.191M0.09 0.191H0.033a0.153 0.153 0 0 0 0.104 0.129A0.27 0.27 0 0 1 0.09 0.192m0.132 0.129A0.225 0.225 0 0 0 0.269 0.192h0.057a0.153 0.153 0 0 1 -0.104 0.129z" clip-rule="evenodd"/></svg>
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a href="/" target="_self" class="header-btn">
-                        <span>
-                            <svg width="32" height="32" viewBox="0 0 0.96 0.96" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="M.796.506a.04.04 0 0 1 0-.053L.847.395A.04.04 0 0 0 .852.348L.772.21A.04.04 0 0 0 .729.191L.654.206A.04.04 0 0 1 .608.18L.584.107A.04.04 0 0 0 .546.08h-.16a.04.04 0 0 0-.04.027L.324.18a.04.04 0 0 1-.046.026L.2.192a.04.04 0 0 0-.04.019L.08.349a.04.04 0 0 0 .004.047l.051.058a.04.04 0 0 1 0 .053L.084.564A.04.04 0 0 0 .08.611l.08.138a.04.04 0 0 0 .043.019L.278.753a.04.04 0 0 1 .046.026l.024.073a.04.04 0 0 0 .04.027h.16A.04.04 0 0 0 .586.852L.61.779A.04.04 0 0 1 .656.753l.075.015A.04.04 0 0 0 .774.749l.08-.138A.04.04 0 0 0 .849.564ZM.736.56l.032.036-.051.089L.67.675a.12.12 0 0 0-.138.08L.517.8H.415L.4.754a.12.12 0 0 0-.138-.08l-.047.01L.163.596.195.56a.12.12 0 0 0 0-.16L.163.364.214.276l.047.01a.12.12 0 0 0 .138-.08L.414.16h.102l.015.046a.12.12 0 0 0 .138.08l.047-.01.051.089-.032.036a.12.12 0 0 0 0 .159M.464.32a.16.16 0 1 0 .16.16.16.16 0 0 0-.16-.16m0 .24a.08.08 0 1 1 .08-.08.08.08 0 0 1-.08.08"/></svg>
+                <li class="links-li">
+                    <a href="https://www.blockmango.com/creator.html#/" class="link sandmod" target="_blank" title="SandmodEngine creator center">
+                        <span class="link-svg">
+                            <img src="images/logo-.png" width="14px" height="18px">
+                        </span>
+                        <span class="link-svg">
+                            <svg width="18px" height="18px" viewBox="0 0 0.36 0.36" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#b4b4b4" d="M0.185 0.091a0.017 0.017 0 1 1 0.023 -0.025l0.101 0.096a0.017 0.017 0 0 1 0 0.025l-0.101 0.096a0.017 0.017 0 0 1 -0.023 -0.025L0.256 0.191H0.062a0.017 0.017 0 0 1 0 -0.034h0.194z"/></svg>
+                        </span>
+                        <span class="link-svg">
+                            <svg width="16px" height="16px" viewBox="0 0 0.36 0.36" xmlns="http://www.w3.org/2000/svg" fill="none"><g fill="#b4b4b4" fill-rule="evenodd" clip-rule="evenodd"><path d="M0.18 0.112a0.068 0.068 0 1 0 0 0.135 0.068 0.068 0 0 0 0 -0.135M0.146 0.18a0.034 0.034 0 1 1 0.068 0 0.034 0.034 0 0 1 -0.068 0"/><path d="M0.169 0a0.038 0.038 0 0 0 -0.039 0.039v0.003L0.119 0.046 0.117 0.044a0.038 0.038 0 0 0 -0.055 0L0.046 0.06a0.038 0.038 0 0 0 0 0.055l0.002 0.002 -0.005 0.011H0.041A0.039 0.039 0 0 0 0 0.169v0.022c0 0.022 0.018 0.039 0.039 0.039h0.003l0.005 0.011 -0.002 0.002a0.038 0.038 0 0 0 0 0.055L0.06 0.314a0.038 0.038 0 0 0 0.055 0L0.118 0.312l0.011 0.005v0.003c0 0.022 0.018 0.039 0.039 0.039h0.022A0.038 0.038 0 0 0 0.229 0.32V0.317L0.239 0.312l0.002 0.002a0.038 0.038 0 0 0 0.055 0L0.313 0.298a0.038 0.038 0 0 0 0 -0.055L0.31 0.241 0.315 0.23h0.003A0.039 0.039 0 0 0 0.36 0.191v-0.022A0.038 0.038 0 0 0 0.321 0.13H0.318L0.314 0.119 0.316 0.117a0.038 0.038 0 0 0 0 -0.055L0.3 0.046a0.038 0.038 0 0 0 -0.055 0L0.242 0.048 0.232 0.044V0.041A0.039 0.039 0 0 0 0.191 0zM0.164 0.039A0.007 0.007 0 0 1 0.169 0.034h0.022a0.007 0.007 0 0 1 0.005 0.005v0.016a0.015 0.015 0 0 0 0.013 0.017 0.075 0.075 0 0 1 0.027 0.011 0.015 0.015 0 0 0 0.02 -0.003L0.268 0.068a0.005 0.005 0 0 1 0.008 0l0.016 0.016a0.005 0.005 0 0 1 0 0.008L0.28 0.104A0.015 0.015 0 0 0 0.277 0.124l0.011 0.027a0.015 0.015 0 0 0 0.017 0.013h0.016a0.007 0.007 0 0 1 0.005 0.005v0.022a0.007 0.007 0 0 1 -0.005 0.005H0.305a0.015 0.015 0 0 0 -0.017 0.013 0.075 0.075 0 0 1 -0.011 0.027 0.015 0.015 0 0 0 0.003 0.02l0.011 0.011a0.005 0.005 0 0 1 0 0.008L0.276 0.292a0.005 0.005 0 0 1 -0.008 0L0.257 0.28A0.015 0.015 0 0 0 0.236 0.277a0.15 0.15 0 0 1 -0.027 0.011 0.015 0.015 0 0 0 -0.013 0.017v0.016a0.007 0.007 0 0 1 -0.005 0.005h-0.022A0.007 0.007 0 0 1 0.164 0.321V0.305A0.015 0.015 0 0 0 0.151 0.289 0.15 0.15 0 0 1 0.124 0.277a0.015 0.015 0 0 0 -0.02 0.003L0.092 0.292a0.005 0.005 0 0 1 -0.008 0L0.068 0.276a0.005 0.005 0 0 1 0 -0.008L0.08 0.257A0.015 0.015 0 0 0 0.083 0.236 0.15 0.15 0 0 1 0.071 0.209 0.015 0.015 0 0 0 0.055 0.197H0.039A0.007 0.007 0 0 1 0.034 0.191v-0.022A0.007 0.007 0 0 1 0.039 0.164h0.016A0.015 0.015 0 0 0 0.071 0.151 0.075 0.075 0 0 1 0.083 0.124 0.015 0.015 0 0 0 0.08 0.104L0.068 0.092a0.005 0.005 0 0 1 0 -0.008L0.084 0.068a0.005 0.005 0 0 1 0.008 0l0.011 0.011A0.015 0.015 0 0 0 0.124 0.083 0.15 0.15 0 0 1 0.151 0.071 0.015 0.015 0 0 0 0.164 0.055z"/></g></svg>
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a href="/" target="_self" class="header-btn">
-                        <span>
-                            <svg width="32" height="32" viewBox="0 0 0.96 0.96" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><path d="M.48.08a.4.4 0 1 0 .4.4.4.4 0 0 0-.4-.4m0 .72A.32.32 0 1 1 .8.48.32.32 0 0 1 .48.8m0-.34A.04.04 0 0 0 .44.5v.12a.04.04 0 0 0 .08 0V.5A.04.04 0 0 0 .48.46m0-.16a.05.05 0 1 0 .05.05A.05.05 0 0 0 .48.3"/></svg>
+                <li class="links-li">
+                    <a href="https://discord.gg/vrj3FZWggK" class="link sandmod" target="_blank" title="SandmodEngine discord server">
+                        <span class="link-svg">
+                            <img src="images/logo-.png" width="14px" height="18px">
+                        </span>
+                        <span class="link-svg">
+                            <svg width="18px" height="18px" viewBox="0 0 0.36 0.36" xmlns="http://www.w3.org/2000/svg" fill="none"><path fill="#b4b4b4" d="M0.185 0.091a0.017 0.017 0 1 1 0.023 -0.025l0.101 0.096a0.017 0.017 0 0 1 0 0.025l-0.101 0.096a0.017 0.017 0 0 1 -0.023 -0.025L0.256 0.191H0.062a0.017 0.017 0 0 1 0 -0.034h0.194z"/></svg>
+                        </span>
+                        <span class="link-svg">
+                            <svg width="18px" height="18px" viewBox="0 0 18 18" style="enable-background:new 0 0 100 100;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">.st0{fill:#FFFFFF;}
+                                .st1{fill:#F5BB41;}
+                                .st2{fill:#2167D1;}
+                                .st3{fill:#3D84F3;}
+                                .st4{fill:#4CA853;}
+                                .st5{fill:#398039;}
+                                .st6{fill:#D74F3F;}
+                                .st7{fill:#D43C89;}
+                                .st8{fill:#B2005F;}
+                                .st9{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                                
+                                    .st10{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                                
+                                    .st11{fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#040404;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+                                .st12{fill-rule:evenodd;clip-rule:evenodd;}
+                                .st13{fill-rule:evenodd;clip-rule:evenodd;fill:#040404;}
+                                .st14{fill:url(#SVGID_1_);}
+                                .st15{fill:url(#SVGID_2_);}
+                                .st16{fill:url(#SVGID_3_);}
+                                .st17{fill:url(#SVGID_4_);}
+                                .st18{fill:url(#SVGID_5_);}
+                                .st19{fill:url(#SVGID_6_);}
+                                .st20{fill:url(#SVGID_7_);}
+                                .st21{fill:url(#SVGID_8_);}
+                                .st22{fill:url(#SVGID_9_);}
+                                .st23{fill:url(#SVGID_10_);}
+                                .st24{fill:url(#SVGID_11_);}
+                                .st25{fill:url(#SVGID_12_);}
+                                .st26{fill:url(#SVGID_13_);}
+                                .st27{fill:url(#SVGID_14_);}
+                                .st28{fill:url(#SVGID_15_);}
+                                .st29{fill:url(#SVGID_16_);}
+                                .st30{fill:url(#SVGID_17_);}
+                                .st31{fill:url(#SVGID_18_);}
+                                .st32{fill:url(#SVGID_19_);}
+                                .st33{fill:url(#SVGID_20_);}
+                                .st34{fill:url(#SVGID_21_);}
+                                .st35{fill:url(#SVGID_22_);}
+                                .st36{fill:url(#SVGID_23_);}
+                                .st37{fill:url(#SVGID_24_);}
+                                .st38{fill:url(#SVGID_25_);}
+                                .st39{fill:url(#SVGID_26_);}
+                                .st40{fill:url(#SVGID_27_);}
+                                .st41{fill:url(#SVGID_28_);}
+                                .st42{fill:url(#SVGID_29_);}
+                                .st43{fill:url(#SVGID_30_);}
+                                .st44{fill:url(#SVGID_31_);}
+                                .st45{fill:url(#SVGID_32_);}
+                                .st46{fill:url(#SVGID_33_);}
+                                .st47{fill:url(#SVGID_34_);}
+                                .st48{fill:url(#SVGID_35_);}
+                                .st49{fill:url(#SVGID_36_);}
+                                .st50{fill:url(#SVGID_37_);}
+                                .st51{fill:url(#SVGID_38_);}
+                                .st52{fill:url(#SVGID_39_);}
+                                .st53{fill:url(#SVGID_40_);}
+                                .st54{fill:url(#SVGID_41_);}
+                                .st55{fill:url(#SVGID_42_);}
+                                .st56{fill:url(#SVGID_43_);}
+                                .st57{fill:url(#SVGID_44_);}
+                                .st58{fill:url(#SVGID_45_);}
+                                .st59{fill:#040404;}
+                                .st60{fill:url(#SVGID_46_);}
+                                .st61{fill:url(#SVGID_47_);}
+                                .st62{fill:url(#SVGID_48_);}
+                                .st63{fill:url(#SVGID_49_);}
+                                .st64{fill:url(#SVGID_50_);}
+                                .st65{fill:url(#SVGID_51_);}
+                                .st66{fill:url(#SVGID_52_);}
+                                .st67{fill:url(#SVGID_53_);}
+                                .st68{fill:url(#SVGID_54_);}
+                                .st69{fill:url(#SVGID_55_);}
+                                .st70{fill:url(#SVGID_56_);}
+                                .st71{fill:url(#SVGID_57_);}
+                                .st72{fill:url(#SVGID_58_);}
+                                .st73{fill:url(#SVGID_59_);}
+                                .st74{fill:url(#SVGID_60_);}
+                                .st75{fill:url(#SVGID_61_);}
+                                .st76{fill:url(#SVGID_62_);}
+                                .st77{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+                                .st78{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
+                                .st79{fill:#4BC9FF;}
+                                .st80{fill:#5500DD;}
+                                .st81{fill:#FF3A00;}
+                                .st82{fill:#E6162D;}
+                                .st83{fill:#F1F1F1;}
+                                .st84{fill:#FF9933;}
+                                .st85{fill:#B92B27;}
+                                .st86{fill:#00ACED;}
+                                .st87{fill:#BD2125;}
+                                .st88{fill:#1877F2;}
+                                .st89{fill:#6665D2;}
+                                .st90{fill:#CE3056;}
+                                .st91{fill:#5BB381;}
+                                .st92{fill:#61C3EC;}
+                                .st93{fill:#E4B34B;}
+                                .st94{fill:#181EF2;}
+                                .st95{fill:#FF0000;}
+                                .st96{fill:#FE466C;}
+                                .st97{fill:#FA4778;}
+                                .st98{fill:#FF7700;}
+                                .st99{fill-rule:evenodd;clip-rule:evenodd;fill:#1F6BF6;}
+                                .st100{fill:#520094;}
+                                .st101{fill:#4477E8;}
+                                .st102{fill:#3D1D1C;}
+                                .st103{fill:#FFE812;}
+                                .st104{fill:#344356;}
+                                .st105{fill:#00CC76;}
+                                .st106{fill-rule:evenodd;clip-rule:evenodd;fill:#345E90;}
+                                .st107{fill:#1F65D8;}
+                                .st108{fill:#EB3587;}
+                                .st109{fill-rule:evenodd;clip-rule:evenodd;fill:#603A88;}
+                                .st110{fill:#E3CE99;}
+                                .st111{fill:#783AF9;}
+                                .st112{fill:#FF515E;}
+                                .st113{fill:#FF4906;}
+                                .st114{fill:#503227;}
+                                .st115{fill:#4C7BD9;}
+                                .st116{fill:#69C9D0;}
+                                .st117{fill:#1B92D1;}
+                                .st118{fill:#EB4F4A;}
+                                .st119{fill:#513728;}
+                                .st120{fill:#FF6600;}
+                                .st121{fill-rule:evenodd;clip-rule:evenodd;fill:#B61438;}
+                                .st122{fill:#FFFC00;}
+                                .st123{fill:#141414;}
+                                .st124{fill:#94D137;}
+                                .st125{fill-rule:evenodd;clip-rule:evenodd;fill:#F1F1F1;}
+                                .st126{fill-rule:evenodd;clip-rule:evenodd;fill:#66E066;}
+                                .st127{fill:#2D8CFF;}
+                                .st128{fill:#F1A300;}
+                                .st129{fill:#4BA2F2;}
+                                .st130{fill:#1A5099;}
+                                .st131{fill:#EE6060;}
+                                .st132{fill-rule:evenodd;clip-rule:evenodd;fill:#F48120;}
+                                .st133{fill:#222222;}
+                                .st134{fill:url(#SVGID_63_);}
+                                .st135{fill:#0077B5;}
+                                .st136{fill:#FFCC00;}
+                                .st137{fill:#EB3352;}
+                                .st138{fill:#F9D265;}
+                                .st139{fill:#F5B955;}
+                                .st140{fill:#DD2A7B;}
+                                .st141{fill:#66E066;}
+                                .st142{fill:#EB4E00;}
+                                .st143{fill:#FFC794;}
+                                .st144{fill:#B5332A;}
+                                .st145{fill:#4E85EB;}
+                                .st146{fill:#58A45C;}
+                                .st147{fill:#F2BC42;}
+                                .st148{fill:#D85040;}
+                                .st149{fill:#464EB8;}
+                                .st150{fill:#7B83EB;}</style><g id="Layer_1"/><g id="Layer_2"><g><g><path class="st89" d="M15.34 4.492c-2.063 -1.543 -4.039 -1.5 -4.039 -1.5l-0.202 0.231c2.452 0.736 3.592 1.817 3.592 1.817 -3.508 -1.932 -7.977 -1.918 -11.626 0 0 0 1.183 -1.14 3.779 -1.875l-0.144 -0.173s-1.962 -0.043 -4.039 1.5c0 0 -2.077 3.736 -2.077 8.337 0 0 1.212 2.077 4.4 2.178 0 0 0.534 -0.635 0.966 -1.183 -1.832 -0.548 -2.524 -1.688 -2.524 -1.688 1.151 0.72 2.315 1.171 3.765 1.457 2.359 0.486 5.294 -0.014 7.486 -1.457 0 0 -0.721 1.168 -2.611 1.702a112.5 112.5 0 0 0 0.952 1.154c3.188 -0.101 4.399 -2.178 4.399 -2.164 0 -4.602 -2.077 -8.337 -2.077 -8.337M6.31 11.488c-0.808 0 -1.471 -0.707 -1.471 -1.587 0.059 -2.107 2.898 -2.101 2.943 0 0 0.88 -0.649 1.587 -1.471 1.587m5.265 0c-0.808 0 -1.471 -0.707 -1.471 -1.587 0.065 -2.103 2.869 -2.104 2.943 0 0 0.88 -0.649 1.587 -1.471 1.587"/></g></g></g></svg>
                         </span>
                     </a>
                 </li>
             </ul>
         </div>
-    </header>
+    </div>
+    <div class="main-content">
+        <div class="tags-header">
+            <div class="icon">
+                <span>
+                    <svg fill="#b4b4b4" width="18px" height="18px" viewBox="0 0 0.54 0.54" xmlns="http://www.w3.org/2000/svg"><path d="M0.427 0.045H0.112a0.068 0.068 0 0 0 -0.068 0.068v0.026a0.068 0.068 0 0 0 0.006 0.027v0.001a0.063 0.063 0 0 0 0.013 0.019L0.202 0.324V0.472a0.022 0.022 0 0 0 0.011 0.019A0.022 0.022 0 0 0 0.225 0.495a0.022 0.022 0 0 0 0.01 -0.002l0.09 -0.045A0.022 0.022 0 0 0 0.337 0.427v-0.103l0.138 -0.138a0.063 0.063 0 0 0 0.013 -0.019v-0.001a0.068 0.068 0 0 0 0.007 -0.027V0.112a0.068 0.068 0 0 0 -0.068 -0.068m-0.128 0.254A0.022 0.022 0 0 0 0.292 0.315v0.099l-0.045 0.022V0.315a0.022 0.022 0 0 0 -0.007 -0.016L0.122 0.18h0.297ZM0.45 0.135H0.09V0.112a0.022 0.022 0 0 1 0.022 -0.022h0.315a0.022 0.022 0 0 1 0.022 0.022Z"/></svg>
+                </span>
+            </div>
+            <div class="tags">
+                <ul class="tags-ul">
+                    <li class="tags-li">
+                        <button type="button" class="tag-btn active">
+                            <span class="svg">
+                                <svg width="20px" height="20px" viewBox="0 0 0.6 0.6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.1 0.166q0.005 -0.002 0.013 -0.005A0.245 0.245 0 0 1 0.188 0.15a0.245 0.245 0 0 1 0.075 0.011q0.007 0.002 0.013 0.005v0.272A0.295 0.295 0 0 0 0.188 0.425c-0.036 0 -0.066 0.006 -0.088 0.013zm0.2 -0.044a0.225 0.225 0 0 0 -0.022 -0.008A0.295 0.295 0 0 0 0.188 0.1c-0.038 0 -0.069 0.007 -0.09 0.014a0.225 0.225 0 0 0 -0.025 0.01 0.15 0.15 0 0 0 -0.009 0.004l-0.001 0 0 0 0 0h0c0 0 -0.006 0.004 0 0A0.025 0.025 0 0 0 0.05 0.15v0.325a0.025 0.025 0 0 0 0.038 0.022l0 0h0l0 0 0 0 0.001 -0.001q0.001 -0.001 0.005 -0.002c0.004 -0.002 0.011 -0.005 0.019 -0.007A0.245 0.245 0 0 1 0.188 0.475a0.245 0.245 0 0 1 0.075 0.011 0.175 0.175 0 0 1 0.019 0.007 0.1 0.1 0 0 1 0.006 0.003m0 0zl0 0 0 0c0.008 0.005 0.018 0.005 0.025 0l0.001 -0.001q0.001 -0.001 0.005 -0.002a0.175 0.175 0 0 1 0.019 -0.007A0.245 0.245 0 0 1 0.413 0.475a0.245 0.245 0 0 1 0.075 0.011 0.175 0.175 0 0 1 0.019 0.007 0.1 0.1 0 0 1 0.005 0.003A0.025 0.025 0 0 0 0.55 0.475V0.15a0.025 0.025 0 0 0 -0.012 -0.022l0 0h0l0 0 0 0 -0.001 0a0.15 0.15 0 0 0 -0.009 -0.004 0.225 0.225 0 0 0 -0.025 -0.01A0.295 0.295 0 0 0 0.413 0.1c-0.038 0 -0.069 0.007 -0.09 0.014a0.225 0.225 0 0 0 -0.022 0.008m0.2 0.044v0.272A0.295 0.295 0 0 0 0.413 0.425c-0.036 0 -0.066 0.006 -0.088 0.013V0.166q0.005 -0.002 0.013 -0.005A0.245 0.245 0 0 1 0.413 0.15a0.245 0.245 0 0 1 0.075 0.011q0.007 0.002 0.013 0.005m0.012 0.006 0 0h0zm0 0.325 0 0 0 0" fill="#b4b4b4"/></svg>
+                            </span>
+                            <span class="text">
+                                TUTORIALS
+                            </span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="tag-btn">
+                            <span class="svg">
+                                <svg width="17px" height="19px" viewBox="0 0 0.337 0.337" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.164 0.018a0.011 0.011 0 0 1 0.009 0l0.135 0.063A0.011 0.011 0 0 1 0.315 0.091v0.155a0.011 0.011 0 0 1 -0.007 0.01l-0.135 0.063a0.011 0.011 0 0 1 -0.009 0l-0.135 -0.063A0.011 0.011 0 0 1 0.022 0.246v-0.155a0.011 0.011 0 0 1 0.007 -0.01zM0.045 0.108 0.158 0.156v0.136l-0.112 -0.052zm0.135 0.184 0.112 -0.052V0.108L0.18 0.156zm-0.011 -0.155 0.107 -0.046L0.169 0.041 0.061 0.091z" fill="#b4b4b4"/></svg>
+                            </span>
+                            <span class="text">
+                                ASSETS
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tutorials-grid">
+            <ul class="tutorials-ul">
+                <li class="tutorials-li">
+                    <a href="/" class="cardlink" target="_blank" title="How to create items&inventory">
+                        <div class="tutorial-card">
+                            <div class="svg-icon">
+                                <span class="title-svg">
+                                    <svg fill="#b4b4b4" width="20px" height="20px" viewBox="0 0 0.72 0.72" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M0.63 0.66H0.18a0.09 0.09 0 0 1 -0.09 -0.09V0.15a0.09 0.09 0 0 1 0.09 -0.09h0.45v0.48a0.03 0.03 0 0 0 0 0.06zm-0.09 -0.09c0 -0.01 0.002 -0.021 0.005 -0.03H0.18a0.03 0.03 0 0 0 0 0.06h0.365c-0.003 -0.009 -0.005 -0.019 -0.005 -0.03m0.03 -0.45H0.18a0.03 0.03 0 0 0 -0.03 0.03v0.335c0.009 -0.003 0.019 -0.005 0.03 -0.005h0.39z"/></svg>
+                                </span>
+                            </div>
+                            <div class="tutorial-title">
+                                <p class="title"><span>How to create items&inventory</span></p>
+                            </div>
+                            <div class="last">
+                                <span>
+                                    <svg width="18px" height="18px" viewBox="0 0 0.54 0.54" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.09 0.149 0.102 0.145A0.27 0.27 0 0 1 0.169 0.135a0.27 0.27 0 0 1 0.068 0.01l0.012 0.005v0.245A0.27 0.27 0 0 0 0.169 0.383 0.27 0.27 0 0 0 0.09 0.394zM0.27 0.11 0.25 0.103A0.27 0.27 0 0 0 0.169 0.09a0.27 0.27 0 0 0 -0.081 0.013l-0.023 0.009 -0.008 0.004H0.057s-0.005 0.004 0 0A0.027 0.027 0 0 0 0.045 0.135v0.293a0.023 0.023 0 0 0 0.034 0.02L0.08 0.446 0.085 0.445 0.102 0.438A0.27 0.27 0 0 1 0.169 0.427a0.27 0.27 0 0 1 0.068 0.01l0.017 0.006 0.005 0.003m0 0a0.018 0.018 0 0 0 0.023 0L0.283 0.446 0.287 0.444 0.304 0.437A0.27 0.27 0 0 1 0.372 0.427a0.27 0.27 0 0 1 0.068 0.01l0.017 0.006 0.005 0.003A0.023 0.023 0 0 0 0.495 0.427V0.135A0.027 0.027 0 0 0 0.484 0.115H0.483L0.475 0.112 0.453 0.103A0.27 0.27 0 0 0 0.372 0.09a0.27 0.27 0 0 0 -0.081 0.013L0.271 0.11m0.18 0.04v0.245A0.27 0.27 0 0 0 0.372 0.383a0.27 0.27 0 0 0 -0.079 0.012V0.149L0.304 0.145A0.27 0.27 0 0 1 0.372 0.135a0.27 0.27 0 0 1 0.068 0.01zm0.011 0.298" fill="#b4b4b4"/></svg>
+                                </span>
+                            </div>
+                            <div class="last" style="right: 10px;">
+                                <span>
+                                    <svg width="18px" height="18px" viewBox="0 0 0.337 0.337" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.089 0.066V0.101a0.01 0.01 0 0 1 -0.02 0v-0.045a0.01 0.01 0 0 1 0.01 -0.01h0.18a0.01 0.01 0 0 1 0.01 0.01v0.045a0.01 0.01 0 1 1 -0.02 0V0.066h-0.068v0.205h0.027a0.01 0.01 0 0 1 0 0.02h-0.079a0.01 0.01 0 1 1 0 -0.02H0.156v-0.205z" fill="#b4b4b4"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="tutorials-li">
+                    <a href="/" class="cardlink" target="_blank" title="How to create items&inventory">
+                        <div class="tutorial-card">
+                            <div class="svg-icon">
+                                <span class="title-svg">
+                                    <svg fill="#b4b4b4" width="20px" height="20px" viewBox="0 0 0.72 0.72" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M0.63 0.66H0.18a0.09 0.09 0 0 1 -0.09 -0.09V0.15a0.09 0.09 0 0 1 0.09 -0.09h0.45v0.48a0.03 0.03 0 0 0 0 0.06zm-0.09 -0.09c0 -0.01 0.002 -0.021 0.005 -0.03H0.18a0.03 0.03 0 0 0 0 0.06h0.365c-0.003 -0.009 -0.005 -0.019 -0.005 -0.03m0.03 -0.45H0.18a0.03 0.03 0 0 0 -0.03 0.03v0.335c0.009 -0.003 0.019 -0.005 0.03 -0.005h0.39z"/></svg>
+                                </span>
+                            </div>
+                            <div class="tutorial-title">
+                                <p class="title"><span>How to create health bar</span></p>
+                            </div>
+                            <div class="last">
+                                <span>
+                                    <svg width="18px" height="18px" viewBox="0 0 0.54 0.54" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.09 0.149 0.102 0.145A0.27 0.27 0 0 1 0.169 0.135a0.27 0.27 0 0 1 0.068 0.01l0.012 0.005v0.245A0.27 0.27 0 0 0 0.169 0.383 0.27 0.27 0 0 0 0.09 0.394zM0.27 0.11 0.25 0.103A0.27 0.27 0 0 0 0.169 0.09a0.27 0.27 0 0 0 -0.081 0.013l-0.023 0.009 -0.008 0.004H0.057s-0.005 0.004 0 0A0.027 0.027 0 0 0 0.045 0.135v0.293a0.023 0.023 0 0 0 0.034 0.02L0.08 0.446 0.085 0.445 0.102 0.438A0.27 0.27 0 0 1 0.169 0.427a0.27 0.27 0 0 1 0.068 0.01l0.017 0.006 0.005 0.003m0 0a0.018 0.018 0 0 0 0.023 0L0.283 0.446 0.287 0.444 0.304 0.437A0.27 0.27 0 0 1 0.372 0.427a0.27 0.27 0 0 1 0.068 0.01l0.017 0.006 0.005 0.003A0.023 0.023 0 0 0 0.495 0.427V0.135A0.027 0.027 0 0 0 0.484 0.115H0.483L0.475 0.112 0.453 0.103A0.27 0.27 0 0 0 0.372 0.09a0.27 0.27 0 0 0 -0.081 0.013L0.271 0.11m0.18 0.04v0.245A0.27 0.27 0 0 0 0.372 0.383a0.27 0.27 0 0 0 -0.079 0.012V0.149L0.304 0.145A0.27 0.27 0 0 1 0.372 0.135a0.27 0.27 0 0 1 0.068 0.01zm0.011 0.298" fill="#b4b4b4"/></svg>
+                                </span>
+                            </div>
+                            <div class="last" style="right: 10px;">
+                                <span>
+                                    <svg fill="#b4b4b4" width="18px" height="18px" viewBox="0 0 0.54 0.54" xmlns="http://www.w3.org/2000/svg"><path d="M0.485 0.161a0.022 0.022 0 0 0 -0.022 0L0.383 0.2A0.068 0.068 0 0 0 0.315 0.135H0.112a0.068 0.068 0 0 0 -0.068 0.068v0.135a0.068 0.068 0 0 0 0.068 0.068h0.203A0.068 0.068 0 0 0 0.383 0.34l0.08 0.04L0.473 0.383A0.022 0.022 0 0 0 0.485 0.38 0.022 0.022 0 0 0 0.495 0.36V0.18A0.022 0.022 0 0 0 0.485 0.161M0.338 0.338a0.022 0.022 0 0 1 -0.022 0.022H0.112A0.022 0.022 0 0 1 0.09 0.338V0.203A0.022 0.022 0 0 1 0.112 0.18h0.203a0.022 0.022 0 0 1 0.022 0.022ZM0.45 0.323 0.383 0.289V0.25L0.45 0.216Z"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="tutorials-li">
+                    <a href="/" class="cardlink" target="_blank" title="How to create items&inventory">
+                        <div class="tutorial-card">
+                            <div class="svg-icon">
+                                <span class="title-svg">
+                                    <svg fill="#b4b4b4" width="20px" height="20px" viewBox="0 0 0.72 0.72" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M0.63 0.66H0.18a0.09 0.09 0 0 1 -0.09 -0.09V0.15a0.09 0.09 0 0 1 0.09 -0.09h0.45v0.48a0.03 0.03 0 0 0 0 0.06zm-0.09 -0.09c0 -0.01 0.002 -0.021 0.005 -0.03H0.18a0.03 0.03 0 0 0 0 0.06h0.365c-0.003 -0.009 -0.005 -0.019 -0.005 -0.03m0.03 -0.45H0.18a0.03 0.03 0 0 0 -0.03 0.03v0.335c0.009 -0.003 0.019 -0.005 0.03 -0.005h0.39z"/></svg>
+                                </span>
+                            </div>
+                            <div class="tutorial-title">
+                                <p class="title"><span>How to make the object moves using 'w'a's'd'</span></p>
+                            </div>
+                            <div class="last">
+                                <span>
+                                    <svg width="18px" height="18px" viewBox="0 0 0.54 0.54" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.09 0.149 0.102 0.145A0.27 0.27 0 0 1 0.169 0.135a0.27 0.27 0 0 1 0.068 0.01l0.012 0.005v0.245A0.27 0.27 0 0 0 0.169 0.383 0.27 0.27 0 0 0 0.09 0.394zM0.27 0.11 0.25 0.103A0.27 0.27 0 0 0 0.169 0.09a0.27 0.27 0 0 0 -0.081 0.013l-0.023 0.009 -0.008 0.004H0.057s-0.005 0.004 0 0A0.027 0.027 0 0 0 0.045 0.135v0.293a0.023 0.023 0 0 0 0.034 0.02L0.08 0.446 0.085 0.445 0.102 0.438A0.27 0.27 0 0 1 0.169 0.427a0.27 0.27 0 0 1 0.068 0.01l0.017 0.006 0.005 0.003m0 0a0.018 0.018 0 0 0 0.023 0L0.283 0.446 0.287 0.444 0.304 0.437A0.27 0.27 0 0 1 0.372 0.427a0.27 0.27 0 0 1 0.068 0.01l0.017 0.006 0.005 0.003A0.023 0.023 0 0 0 0.495 0.427V0.135A0.027 0.027 0 0 0 0.484 0.115H0.483L0.475 0.112 0.453 0.103A0.27 0.27 0 0 0 0.372 0.09a0.27 0.27 0 0 0 -0.081 0.013L0.271 0.11m0.18 0.04v0.245A0.27 0.27 0 0 0 0.372 0.383a0.27 0.27 0 0 0 -0.079 0.012V0.149L0.304 0.145A0.27 0.27 0 0 1 0.372 0.135a0.27 0.27 0 0 1 0.068 0.01zm0.011 0.298" fill="#b4b4b4"/></svg>
+                                </span>
+                            </div>
+                            <div class="last" style="right: 10px;">
+                                <span>
+                                    <svg fill="#b4b4b4" width="18px" height="18px" viewBox="0 0 0.54 0.54" xmlns="http://www.w3.org/2000/svg"><path d="M0.485 0.161a0.022 0.022 0 0 0 -0.022 0L0.383 0.2A0.068 0.068 0 0 0 0.315 0.135H0.112a0.068 0.068 0 0 0 -0.068 0.068v0.135a0.068 0.068 0 0 0 0.068 0.068h0.203A0.068 0.068 0 0 0 0.383 0.34l0.08 0.04L0.473 0.383A0.022 0.022 0 0 0 0.485 0.38 0.022 0.022 0 0 0 0.495 0.36V0.18A0.022 0.022 0 0 0 0.485 0.161M0.338 0.338a0.022 0.022 0 0 1 -0.022 0.022H0.112A0.022 0.022 0 0 1 0.09 0.338V0.203A0.022 0.022 0 0 1 0.112 0.18h0.203a0.022 0.022 0 0 1 0.022 0.022ZM0.45 0.323 0.383 0.289V0.25L0.45 0.216Z"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
+
+<!-- asset <svg width="17px" height="19px" viewBox="0 0 0.337 0.337" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.164 0.018a0.011 0.011 0 0 1 0.009 0l0.135 0.063A0.011 0.011 0 0 1 0.315 0.091v0.155a0.011 0.011 0 0 1 -0.007 0.01l-0.135 0.063a0.011 0.011 0 0 1 -0.009 0l-0.135 -0.063A0.011 0.011 0 0 1 0.022 0.246v-0.155a0.011 0.011 0 0 1 0.007 -0.01zM0.045 0.108 0.158 0.156v0.136l-0.112 -0.052zm0.135 0.184 0.112 -0.052V0.108L0.18 0.156zm-0.011 -0.155 0.107 -0.046L0.169 0.041 0.061 0.091z" fill="#b4b4b4"/></svg> -->
+<!-- video <svg fill="#b4b4b4" width="18px" height="18px" viewBox="0 0 0.54 0.54" xmlns="http://www.w3.org/2000/svg"><path d="M0.485 0.161a0.022 0.022 0 0 0 -0.022 0L0.383 0.2A0.068 0.068 0 0 0 0.315 0.135H0.112a0.068 0.068 0 0 0 -0.068 0.068v0.135a0.068 0.068 0 0 0 0.068 0.068h0.203A0.068 0.068 0 0 0 0.383 0.34l0.08 0.04L0.473 0.383A0.022 0.022 0 0 0 0.485 0.38 0.022 0.022 0 0 0 0.495 0.36V0.18A0.022 0.022 0 0 0 0.485 0.161M0.338 0.338a0.022 0.022 0 0 1 -0.022 0.022H0.112A0.022 0.022 0 0 1 0.09 0.338V0.203A0.022 0.022 0 0 1 0.112 0.18h0.203a0.022 0.022 0 0 1 0.022 0.022ZM0.45 0.323 0.383 0.289V0.25L0.45 0.216Z"/></svg> -->
