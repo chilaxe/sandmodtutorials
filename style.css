@@ -90,9 +90,6 @@ body {
 }
 
 .tags-header {
-    position: sticky;
-    top: 10%;
-    z-index: 1;
     display: flex;
     align-items: center;
     width: 500px;
@@ -272,6 +269,8 @@ body {
     }
 
     .main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card {
+        display: flex;
+        justify-content: center;
         width: 80vw;
         height: auto;
         flex-direction: column; 
@@ -280,7 +279,8 @@ body {
     }
 
     .main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .svg-icon {
-        width: 100%;
+        border: 1px solid #3f3f3f;
+        border-radius: 5px;
         padding: 5px;
         margin-bottom: 10px;
     }
@@ -297,6 +297,9 @@ body {
 
     .main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .last {
         position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-top: 10px;
         background-color: #111; 
         border-radius: 5px; 
@@ -309,7 +312,10 @@ body {
     }
 
     .tags-header {
-        width: 100%; 
+        position: fixed;
+        top: 10px;
+        z-index: 10;
+        width: 100%;
         height: auto; 
         margin: 5px 0; 
     }
