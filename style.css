@@ -313,7 +313,7 @@ body {
 
     .tags-header {
         position: fixed;
-        top: 10px;
+        top: 20px;
         z-index: 10;
         width: 100%;
         height: auto; 
