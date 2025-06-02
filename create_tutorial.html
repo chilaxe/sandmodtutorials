@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Page Editor</title>
+    <link rel="stylesheet" href="tutorialpage.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; margin: 0; height: 100vh; background-color: #111; }
+        #toolbar {
+            width: 280px;
+            padding: 20px;
+            background-color: #111;
+            border-right: 2px solid #222;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            overflow-y: hidden; overflow-x: hidden;
+        }
+        #toolbar h3 { margin-top: 0; color: #333; }
+        #toolbar button, #toolbar input, #toolbar label {
+            display: block;
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #222;
+        }
+        #toolbar button { background-color: transparent; color: #b4b4b4; cursor: pointer; border: 1px solid #222; }
+        #toolbar button:hover { border: 1px solid #666; }
+        #toolbar input[type="text"] { background-color: #111; outline: none; color: #f1f1f1; margin-top: 15px;}
+
+        #editor-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #111; 
+        }
+
+        .preview-content-wrapper {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: #222 transparent;
+        }
+        #editor-preview-area {
+             min-height: 200px;
+        }
+
+        .editable-item {
+            padding: 12px;
+            border: 1px dashed #007bff9a;
+            margin-bottom: 10px;
+            position: relative;
+            background-color: rgba(0, 123, 255, 0.05);
+            border-radius: 4px;
+            cursor: grab;
+        }
+        .editable-item:hover .delete-btn { display: inline-block; }
+        .editable-item[contenteditable="true"]:focus {
+            outline: 2px solid #007bff;
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+
+        .delete-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: transparent;
+            color: #dc3545;
+            border: none;
+            cursor: pointer;
+            padding: 3px 6px;
+            font-size: 32px;
+            border-radius: 5px;
+            display: none;
+            line-height: 1;
+        }
+        .editable-item img { max-width: 100%; display: block; border: 1px solid #eee; }
+
+        .sortable-ghost {
+            opacity: 0.4;
+            background: #1f1f1f;
+            border: 1px dashed #007bff;
+        }
+
+        .editor-static-header { margin-bottom: 15px; } 
+
+        .editor-page-title-preview.title {
+            display: flex;
+            align-items: center;
+        }
+        .editor-page-title-preview svg { 
+            margin-right: 8px;
+        }
+
+        .export-reason {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            color: #b4b4b4;
+            font-size: 14px;
+        }
+
+        .reason {
+            border: 1px solid #333;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #1f1f1f;
+            margin-bottom: 10px;
+        }
+
+        .dc-alt {
+            color: #3551ce;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="toolbar">
+        <a href="/sandmodtutorials/" class="back">
+            <span>
+                <svg width="32" height="32" viewBox="0 0 0.96 0.96" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="M.68.44H.376L.508.308A.04.04 0 1 0 .451.251l-.2.2-.008.013a.04.04 0 0 0 0 .03l.008.013.2.2a.04.04 0 0 0 .057 0 .04.04 0 0 0 0-.057L.376.52H.68a.04.04 0 0 0 0-.08"/></svg>
+            </span>
+        </a>
+        <input type="text" id="pageTitleInput" placeholder="Page Title">
+
+        <button id="addHeaderBtn">Add Header</button>
+        <button id="addParagraphBtn">Add Paragraph</button>
+        <button id="addImageBtn">Add Image</button>
+        <input type="file" id="imageUploadInput" accept="image/*" style="display: none;">
+
+        <hr style="margin: 25px 0; border: none; border-top: 1px solid #333;">
+        <button id="exportBtn">Export Page</button>
+        <div class="export-reason">
+            <p class="reason">Exporting will generate a .zip file containing the HTML and any images used in the tutorial page.</p>
+            <p class="reason">Since there is currently no database system in place, creators who wish to submit a tutorial must export the page and send the resulting .zip file to <span class="dc-alt">chilaxealt</span> via Discord. I will review your submission and publish it as soon as possible.</p>
+        </div>
+    </div>
+
+    <div id="editor-container">
+        <div class="content preview-content-wrapper">
+            <h3 class="editor-page-title-preview title">
+                <svg width="28" height="28" viewBox="0 0 0.84 0.84" xmlns="http://www.w3.org/2000/svg"><path d="M.56.7H.28A.105.105 0 0 1 .175.595v-.35a.035.035 0 0 0-.07 0v.35A.175.175 0 0 0 .28.77h.28a.035.035 0 0 0 0-.07M.35.455A.035.035 0 0 0 .385.49H.56a.035.035 0 0 0 0-.07H.385A.035.035 0 0 0 .35.455M.735.313.733.304V.301L.726.291l-.21-.21-.01-.007H.503L.491.07H.35a.105.105 0 0 0-.105.105v.35A.105.105 0 0 0 .35.63h.28A.105.105 0 0 0 .735.525zM.525.189.616.28H.56A.035.035 0 0 1 .525.245Zm.14.336A.035.035 0 0 1 .63.56H.35A.035.035 0 0 1 .315.525v-.35A.035.035 0 0 1 .35.14h.105v.105A.1.1 0 0 0 .461.28H.385a.035.035 0 0 0 0 .07h.28Z"/></svg>
+                <span id="dynamicPageTitleTextPreview">Page Title Will Appear Here</span>
+            </h3>
+
+            <div class="body" id="editor-preview-area"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script src="editor.js"></script>
+</body>
+</html>

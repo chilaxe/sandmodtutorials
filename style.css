@@ -87,7 +87,7 @@ body {
 .tags-header {
     display: flex;
     align-items: center;
-    width: 500px;
+    width: 642px;
     background-color: #1f1f1f;
     border-radius: 5px;
     margin: 10px;
@@ -102,6 +102,7 @@ body {
     width: 32px;
     height: 32px;
     border-right: 1px solid #666 ;
+    cursor: pointer;
 }
 
 .tags-header .tags {
@@ -217,6 +218,107 @@ body {
 
 .main-content .tutorials-grid .tutorials-ul .tutorials-li .cardlink .tutorial-card .last svg {
     display: block;
+}
+
+.separator {
+    width: 1px;
+    height: 80%;
+    background-color: #666;
+    margin: 10px 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    outline: none;
+}
+
+.search-input {
+    display: flex;
+    width: 200px;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid #303030;
+    border-right: none;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #1d1d1d;
+    color: #8f8f8f;
+    outline: none;
+    margin: 0px;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #1d1d1d;
+    border: 1px solid transparent;
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #303030;
+    cursor: pointer;
+}
+
+.create-tutorial {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #1d1d1d;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.create-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    background-color: #1d1d1d;
+    color: #8f8f8f;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #303030;
+    font-size: 12px;
+}
+
+.create-btn .text {
+    margin-left: 5px;
+}
+
+.filter-area {
+  display: none;
+  position: absolute;
+  background: #222;
+  border-radius: 5px;
+  border: 1px solid #303030;
+  z-index: 10;
+}
+.filter-area.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-btn {
+    display: block;
+  width: 32px;
+  height: 32px;
+  background-color: #1d1d1d;
+  border: 1px solid #303030;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  color: #8f8f8f;
+  transition: background-color 0.2s ease-in-out, outline 0.2s ease-in-out;
+}
+  .filter-btn.active {
+  border: 2px solid #6e6e6e;
 }
 
 @media (max-width: 768px) {
